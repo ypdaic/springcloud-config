@@ -12,8 +12,6 @@ spring:
     user:
       name: admin
       password: test1234
-  application:
-    name: springcloud-config-eureka1-dev
 
 eureka:
   instance: # eureak实例定义
@@ -38,8 +36,6 @@ spring:
     user:
       name: admin
       password: test1234
-  application:
-    name: springcloud-config-eureka1-test
 
 eureka:
   instance: # eureak实例定义
