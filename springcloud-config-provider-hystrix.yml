@@ -1,0 +1,116 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+
+server:
+  port: 8099
+  servlet:
+    context-path: /springcloud-provider
+spring:
+ profiles: dev
+ datasource:
+  druid:
+    filter:
+      stat:
+        log-slow-sql: true #是否打印慢sql
+        merge-sql: true #是否合并sql
+    stat-view-servlet:
+      enable: true
+      allow: 192.168.0.4 #ip 容许列表
+      loginUsername: root
+      loginPassword: test1234
+ application:
+  name: springcloud-provider
+ #security:
+  #user:
+  #  name: admin  # 认证用户名
+  #  password: test1234  # 认证密码
+
+mybatis-plus:
+  mapperLocations: classpath:/sqlMapperXml/**/*.xml
+
+# 将服务注册到eureka上
+eureka:
+  client:
+    serviceUrl:
+      # 单例
+      #defaultZone: http://admin:test1234@localhost:8087/springcloud-eureka/eureka/
+
+      # 高可用
+      defaultZone: http://admin:test1234@eureka1:8097/eureka
+  instance:
+    instanceId: springcloud-provider
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 90  # 如果现在超过了5秒的间隔（默认是90秒）
+
+info:
+  app.name: springcloud-provider
+  company.name: daiyanping
+  build.artifactId: @project.artifactId@
+  build.modelVersion: @project.modelVersion@
+# actuator监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+---
+
+server:
+  port: 8099
+  servlet:
+    context-path: /springcloud-provider
+spring:
+ profiles: dev
+ datasource:
+  druid:
+    filter:
+      stat:
+        log-slow-sql: true #是否打印慢sql
+        merge-sql: true #是否合并sql
+    stat-view-servlet:
+      enable: true
+      allow: 192.168.0.4 #ip 容许列表
+      loginUsername: root
+      loginPassword: test1234
+ application:
+  name: springcloud-provider
+ #security:
+  #user:
+  #  name: admin  # 认证用户名
+  #  password: test1234  # 认证密码
+
+mybatis-plus:
+  mapperLocations: classpath:/sqlMapperXml/**/*.xml
+
+# 将服务注册到eureka上
+eureka:
+  client:
+    serviceUrl:
+      # 单例
+      #defaultZone: http://admin:test1234@localhost:8087/springcloud-eureka/eureka/
+
+      # 高可用
+      defaultZone: http://admin:test1234@eureka1:8097/eureka
+  instance:
+    instanceId: springcloud-provider
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 90  # 如果现在超过了5秒的间隔（默认是90秒）
+
+info:
+  app.name: springcloud-provider
+  company.name: daiyanping
+  build.artifactId: @project.artifactId@
+  build.modelVersion: @project.modelVersion@
+# actuator监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
