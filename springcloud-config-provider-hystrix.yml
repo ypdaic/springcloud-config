@@ -49,8 +49,8 @@ eureka:
 info:
   app.name: springcloud-provider
   company.name: daiyanping
-  build.artifactId: @project.artifactId@
-  build.modelVersion: @project.modelVersion@
+  #build.artifactId: @project.artifactId@
+  #build.modelVersion: @project.modelVersion@
 # actuator监控
 management:
   endpoints:
@@ -106,8 +106,8 @@ eureka:
 info:
   app.name: springcloud-provider
   company.name: daiyanping
-  build.artifactId: @project.artifactId@
-  build.modelVersion: @project.modelVersion@
+  #build.artifactId: @project.artifactId@
+  #build.modelVersion: @project.modelVersion@
 # actuator监控
 management:
   endpoints:
