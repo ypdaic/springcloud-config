@@ -10,7 +10,9 @@ spring:
   profiles: dev
   application:
       name: spring-cloud-config-client-dev
-
+info:
+  app.name: microcloud-config-client-dev
+  company.name: enjoy
 
 ---
 server:
@@ -20,4 +22,6 @@ spring:
   profiles: test
   application:
       name: spring-cloud-config-client-test
-
+info:
+  app.name: microcloud-config-client-dev
+  company.name: enjoy
