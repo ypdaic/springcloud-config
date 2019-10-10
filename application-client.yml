@@ -11,10 +11,7 @@ spring:
   application:
       name: spring-cloud-config-client-dev
 
-eureka:
- client:
-  service-url:
-    defaultZone: http://admin:test1234@eureka1:8087/springcloud-eureka/eureka,http://admin:test1234@eureka2:8090/springcloud-eureka2/eureka
+
 ---
 server:
   port: 8096
@@ -24,7 +21,3 @@ spring:
   application:
       name: spring-cloud-config-client-test
 
-eureka:
- client:
-  service-url:
-    defaultZone: http://admin:test1234@eureka1:8087/springcloud-eureka/eureka,http://admin:test1234@eureka2:8090/springcloud-eureka2/eureka
