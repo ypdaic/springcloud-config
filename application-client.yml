@@ -23,5 +23,5 @@ spring:
   application:
       name: spring-cloud-config-client-test
 info:
-  app.name: microcloud-config-client-dev
+  app.name: microcloud-config-client-test
   company.name: enjoy
