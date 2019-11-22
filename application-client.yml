@@ -25,4 +25,4 @@ spring:
 info:
   app.name: microcloud-config-client-test4
   company.name: enjoy
-test: test
+test: test2
