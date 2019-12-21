@@ -64,7 +64,7 @@ management:
 server:
   port: 9001
   servlet:
-    context-path: /springcloud-provider
+    context-path: /
 spring:
  profiles: test
  datasource:
