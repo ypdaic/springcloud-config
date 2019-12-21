@@ -12,7 +12,7 @@ spring:
       name: admin
       password: test1234
   application:
-    name: springcloud-config-client1
+    name: springcloud-config-client3
 
 eureka:
   client:
