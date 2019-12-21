@@ -5,24 +5,46 @@ spring:
 ---
 server:
   port: 8096
-
 spring:
   profiles: dev
+  security:
+    user:
+      name: admin
+      password: test1234
   application:
-      name: spring-cloud-config-client-dev
+    name: springcloud-config-client1
+
+eureka:
+  client:
+    register-with-eureka: false #是否注册到eureka
+    fetch-registry: false #指示此客户端是否应从eureka服务器获取eureka注册表信息
+    service-url:
+      defaultZone: http://admin:test1234@eureka1:8087/eureka
+
 info:
-  app.name: microcloud-config-client-dev
-  company.name: enjoy
+  app.name: springcloud-config-client1
+  company.name: daiyanping
 
 ---
 server:
   port: 8096
-
 spring:
   profiles: test
+  security:
+    user:
+      name: admin
+      password: test1234
   application:
-      name: spring-cloud-config-client-test
+    name: springcloud-config-client2
+
+eureka:
+  client:
+    register-with-eureka: false #是否注册到eureka
+    fetch-registry: false #指示此客户端是否应从eureka服务器获取eureka注册表信息
+    service-url:
+      defaultZone: http://admin:test1234@eureka1:8087/eureka 
+
+
 info:
-  app.name: microcloud-config-client-test4
-  company.name: enjoy
-test: test
+  app.name: springcloud-config-client2
+  company.name: daiyanping
