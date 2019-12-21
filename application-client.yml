@@ -20,6 +20,11 @@ eureka:
     fetch-registry: false #指示此客户端是否应从eureka服务器获取eureka注册表信息
     service-url:
       defaultZone: http://admin:test1234@eureka1:8087/eureka
+management:
+ endpoints:
+  web:
+   exposure:
+    include: '*'
 
 info:
   app.name: springcloud-config-client3
@@ -48,3 +53,8 @@ eureka:
 info:
   app.name: springcloud-config-client3
   company.name: daiyanping
+management:
+ endpoints:
+  web:
+   exposure:
+    include: '*'
