@@ -52,7 +52,7 @@ eureka:
 
 info:
   app.name: springcloud-config-client5
-  company.name: daiyanping
+  company.name: daiyanping1
 management:
  endpoints:
   web:
